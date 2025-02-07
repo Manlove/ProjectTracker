@@ -251,7 +251,6 @@ class Project_Log():
 		self.cursor.execute("UPDATE projects SET project_status = 'TO DO' WHERE project_status = 'ACTION TAKEN'")
 		return True
 
-
 class Category():
 	def __init__(self, tracker, frame, database, title, position):
 		self.tracker = tracker
@@ -388,10 +387,6 @@ class Project():
 		self.database.update_action(self.project_number, action)
 		self.tracker.build_page()
 
-app = Application()
-app.mainloop()
-
-# a = Project_Log()
-# a.add_project("4765", 42995, "Salk", "RRBS")
-# projects = a.get_by_status("TO DO")
-# print(projects)
+if __name__ == "__main__":
+	app = Application()
+	app.mainloop()
